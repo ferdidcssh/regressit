@@ -606,7 +606,7 @@ function applyImportedModel(obj){
   if(reg.valid){
     const dCoef = Math.abs(reg.m - coef), dInt = Math.abs(reg.b - intercept);
     if(dCoef < 0.05 && dInt < 0.5){
-      html += "<div class='cmp'>✅ Match! Your Python model\u2019s line is <b>almost identical</b> to the best-fit line this app computes. This shows sklearn and this app use the same method: least squares.</div>";
+      html += "<div class='cmp'><b>Match!</b> Your Python model\u2019s line is <b>almost identical</b> to the best-fit line this app computes. This shows sklearn and this app use the same method: least squares.</div>";
     } else {
       html += "<div class='cmp'>This app\u2019s own best-fit line for this data: <b>y = " + fmt(reg.m,2) + "x " + (reg.b>=0?"+":"\u2212") + " " + fmt(Math.abs(reg.b),2) + "</b>. Turn on \u201cBest-fit line\u201d to compare \u2014 if they differ a lot, the uploaded data may not match your model\u2019s training data.</div>";
     }
